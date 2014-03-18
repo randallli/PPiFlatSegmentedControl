@@ -92,6 +92,19 @@
         }
     }
 }
+-(void)setSelectedIndex:(NSUInteger)selectedIndex
+{
+    if(selectedIndex < self.segments.count)
+    {
+        self.currentSelected=selectedIndex;
+        [self updateSegmentsFormat];
+    }
+}
+
+-(NSUInteger) selectedIndex
+{
+    return self.currentSelected;
+}
 #pragma mark - Getters
 /**
  *	Returns if a specified segment is selected
