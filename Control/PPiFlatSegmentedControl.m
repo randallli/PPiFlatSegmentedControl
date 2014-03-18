@@ -175,6 +175,17 @@
         }
     }
 }
+
+
+-(void)setTitleAttributes:(NSDictionary *) attributes forSegmentsAtIndex:(NSUInteger) index
+{
+    if(index<self.segments.count){
+        UIButton *segment=self.segments[index];
+        [segment setTextAttributes:attributes forUIControlState:UIControlStateNormal];
+    }
+}
+
+
 -(void)setBorderColor:(UIColor *)borderColor{
     //Setting boerder color to all view
     _borderColor=borderColor;
