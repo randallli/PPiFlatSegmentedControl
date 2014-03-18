@@ -171,7 +171,8 @@
         if([title isKindOfClass:[NSString class]]){
             [segment setButtonText:title];
         }else if ([title isKindOfClass:[NSAttributedString class]]){
-            [segment setAttributedTitle:title forState:UIControlStateNormal];
+            [segment setTextAttributes:[title attributesAtIndex:0 effectiveRange:NULL] forUIControlState:UIControlStateNormal];
+            [segment setButtonText:[title string]];
         }
     }
 }
